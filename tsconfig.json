@@ -1,0 +1,16 @@
+{
+	"extends": "./tsconfig_parent.json",
+	"include": ["src", ".dumirc.ts"],
+	"exclude": ["node_modules", "./src/__test__/**", "./src/**/__test__/**"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"@@/*": [".dumi/tmp/*"],
+			"@formily/antd-dumi/*": ["src/*"]
+		},
+		"resolveJsonModule": true,
+		"lib": ["ESNext", "DOM"]
+	},
+	"type": ["node"]
+}

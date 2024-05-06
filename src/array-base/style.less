@@ -1,0 +1,106 @@
+@import (reference) '../variable.less';
+@import (reference) '~antd/dist/antd.less';
+@array-base-prefix-cls: ~'@{ant-prefix}-formily-array-base';
+
+.@{array-base-prefix-cls}-remove {
+	transition: all 0.25s ease-in-out;
+	color: @text-color;
+	font-size: 16px;
+	&:hover {
+		color: @primary-5;
+	}
+	&-disabled {
+		color: @disabled-color;
+		cursor: not-allowed !important;
+		&:hover {
+			color: @disabled-color;
+		}
+	}
+}
+
+.@{array-base-prefix-cls}-index {
+	font-size: 14px;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.85);
+}
+
+.@{array-base-prefix-cls}-sort-handle {
+	cursor: move;
+	color: #888 !important;
+}
+
+.@{array-base-prefix-cls}-addition {
+	transition: all 0.25s ease-in-out;
+}
+
+.@{array-base-prefix-cls}-move-down {
+	transition: all 0.25s ease-in-out;
+	color: @text-color;
+	font-size: 16px;
+	margin-left: 6px;
+
+	&:hover {
+		color: @primary-5;
+	}
+}
+
+.@{array-base-prefix-cls}-move-up {
+	transition: all 0.25s ease-in-out;
+	color: @text-color;
+	font-size: 16px;
+	margin-left: 6px;
+
+	&:hover {
+		color: @primary-5;
+	}
+}
+
+.@{array-base-prefix-cls}-edit {
+	transition: all 0.25s ease-in-out;
+	color: @text-color;
+	font-size: 16px;
+	margin-left: 6px;
+
+	&:hover {
+		color: @primary-5;
+	}
+}
+
+.@{array-base-prefix-cls}-pop-confirm-remove {
+	&-overlay {
+		width: 292px;
+		z-index: 2000;
+
+		:global(.atom-popover-message) {
+			padding-bottom: 24px;
+		}
+		:global(.atom-popover-inner-content) {
+			padding: 16px;
+		}
+	}
+
+	&-title {
+		font-size: 16px;
+		color: 262626;
+		font-weight: 600;
+	}
+
+	&-btn {
+		height: 24px;
+		padding: 2px 8px;
+		font-size: 12px;
+	}
+
+	&-description {
+		color: #595959;
+		margin-top: 8px;
+		word-break: break-all;
+	}
+}
+
+.icon-remove {
+	svg {
+		width: 14px;
+		height: 14px;
+	}
+}

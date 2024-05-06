@@ -1,0 +1,33 @@
+
+@import (reference) '../variable.less';
+@form-cls: ~'@{ant-prefix}-formily-form';
+
+.@{form-cls} {
+	display: flex;
+	flex-direction: column;
+
+	&-margin {
+		.@{form-cls}-header, .@{form-cls}-footer {
+			padding: 16px 24px;
+		}
+		.@{form-cls}-body {
+			padding: 16px 24px 0 24px;
+			overflow: auto;
+		}
+	}
+
+	&-inline {
+		display: inline-flex;
+		flex-direction: row;
+
+		.@{form-cls}-body {
+			display: inline-flex;
+		}
+	}
+
+	&-stretch {
+		.@{form-cls}-body {
+			flex: 1;
+		}
+	}
+}

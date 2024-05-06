@@ -1,0 +1,14 @@
+@import (reference) '../variable.less';
+@fc-prefix: ~'@{xt-prefix}-amount-currency';
+
+.@{fc-prefix} {
+	&-wrap {
+		display: flex;
+		gap: 4px 8px;
+		justify-content: space-between;
+		grid-template-columns: repeat(2, 1fr);
+		&-item {
+			width: 100%;
+		}
+	}
+}

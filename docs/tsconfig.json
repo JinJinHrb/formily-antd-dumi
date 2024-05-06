@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"jsx": "react",
+		"module": "commonjs",
+		"target": "es5",
+		"allowJs": false,
+		"noUnusedLocals": false,
+		"preserveConstEnums": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"inlineSources": true,
+		"declaration": true,
+		"experimentalDecorators": true,
+		"downlevelIteration": true,
+		"removeComments": true,
+		"baseUrl": ".", // 设置解析非相对模块名的基准目录，通常是项目的根目录
+		"paths": {
+			"@formily/antd-dumi": ["../src"] // 设置模块名到文件位置的映射
+		},
+		"lib": ["ESNext"]
+	},
+	"include": ["components/**/*"], // 指定需要编译的文件或目录
+	"exclude": ["../../node_modules"] // 指定需要排除的文件或目录
+}

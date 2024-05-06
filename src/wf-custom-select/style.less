@@ -1,0 +1,105 @@
+@import (reference) '../variable.less';
+@fc-prefix: ~'@{xt-prefix}-customSelect';
+.@{fc-prefix} {
+	&-dropdownWrapper {
+		& .@{ant-prefix}-select-item-option-state {
+			display: none;
+		}
+		& .@{ant-prefix}-select-item-option-content{
+			display: flex;
+			// 隐藏checkbox
+			&::before{
+				display: none;
+			}
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		justify-content: center; /* 水平居中 */
+		align-items: center; /* 垂直居中 */
+		flex: 1;
+		& .@{ant-prefix}-select {
+			width: 100%;
+		}
+	}
+
+	&-dropdownDivider {
+		margin: 10px 0;
+	}
+
+	&-dropdownExtension {
+		display: flex;
+		flex-wrap: nowrap;
+		margin: 5px 10px;
+	}
+
+	&-error {
+		color: red;
+	}
+
+	&-inputItem {
+		flex: auto;
+		height: 30px;
+	}
+
+	&-optionItem {
+		flex: 1;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-optionItem:hover &-optionDeleteItem {
+		display: inline;
+		color: #ff934a;
+	}
+
+	&-optionLabelItem {
+		padding: 0;
+	}
+
+	&-optionDeleteItem {
+		display: none;
+	}
+
+	&-colorPaletteButton {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		margin-top: 0;
+		margin-left: 5px;
+		padding-top: 0;
+		padding-bottom: 0;
+		cursor: pointer;
+	}
+
+	&-addItemButton {
+		width: 80px;
+		height: 30px;
+		margin-left: 5px;
+		padding-top: 5px;
+		cursor: 'pointer';
+	}
+
+	&-colorPalette {
+		display: flex;
+		justify-content: space-around;
+
+		& > div {
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+		}
+
+		& > div:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+
+	&-finish-edit {
+		margin-left: 5px;
+		cursor: pointer;
+	}
+}

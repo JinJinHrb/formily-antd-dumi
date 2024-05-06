@@ -1,0 +1,66 @@
+@import (reference) '../variable.less';
+@import (reference) '~antd/dist/antd.less';
+@fc-prefix: ~'@{xt-prefix}-input';
+.@{fc-prefix} {
+	&-wrapper {
+		display: flex;
+		/* & .@{ant-prefix}-select-selector {
+      height: ~'@{height-base}' !important;
+      margin-top: 1px;
+    } */
+	}
+
+	&-areacode {
+		width: 150px;
+	}
+
+	&-input {
+		width: 100%;
+		flex-grow: 1;
+		margin-left: 8px;
+	}
+
+	&-areacode-dropdown {
+		margin: 0;
+		padding-inline-start: 0;
+		max-height: calc(@select-dropdown-height * 5);
+		overflow-y: auto;
+		li {
+			cursor: pointer;
+			height: @select-dropdown-height;
+			padding: 5px 12px;
+			list-style-type: none;
+			margin: 0;
+		}
+		li:hover {
+			background-color: @item-hover-bg;
+		}
+
+		.option {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		.selected-option {
+			background-color: @select-item-selected-bg;
+		}
+
+		.option-recommendation {
+			.option-text {
+				min-width: 100px;
+			}
+			.option-tag {
+				padding-left: 40px;
+				float: right;
+				.option-tag-text {
+					color: @primary-color;
+					border-radius: 2px;
+					border: 1px solid @primary-color;
+					font-size: 12px;
+					padding: 2px 4px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,110 @@
+import * as React from "react";
+import { Icon, IconProps } from "antd/es/Icon";
+
+const DeleteOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="DeleteOutlined" {...props}></Icon>;
+};
+
+const DownOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="DownOutlined" {...props}></Icon>;
+};
+
+const UpOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="UpOutlined" {...props}></Icon>;
+};
+
+const HideOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="EyeInvisibleOutlined" {...props}></Icon>;
+};
+
+const MenuOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="DragOutlined" {...props}></Icon>;
+};
+
+const UploadOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="UploadOutlined" {...props}></Icon>;
+};
+
+const CopyOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="CopyOutlined" {...props}></Icon>;
+};
+
+const CaretUpOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="CaretUpOutlined" {...props}></Icon>;
+};
+
+const CaretDownOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="CaretDownOutlined" {...props}></Icon>;
+};
+
+const CloseOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="CloseOutlined" {...props}></Icon>;
+};
+
+const AddOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="AddOutlined" {...props}></Icon>;
+};
+
+const CheckOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="CheckOutlined" {...props}></Icon>;
+};
+
+const EditOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="EditOutlined" {...props}></Icon>;
+};
+
+const InboxOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="InboxOutlined" {...props}></Icon>;
+};
+const LoadingOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="LoadingOutlined" {...props}></Icon>;
+};
+
+const PlusOutlined: React.FC<IconProps> = (props) => {
+  return <Icon name="PlusCircleOutlined" {...props}></Icon>;
+};
+
+const CheckCircleFilled: React.FC<IconProps & { fillColor?: string }> = (
+  props
+) => {
+  const { color, size = 14, fillColor, ...rest } = props;
+  return (
+    <Icon {...rest}>
+      {/* <IconXSuccess2 color={color} size={size} fillColor={fillColor} /> */}
+      SUCCESS
+    </Icon>
+  );
+};
+
+const MessageOutlined: React.FC<IconProps & { fillColor?: string }> = (
+  props
+) => {
+  const { color, size = 14, fillColor, ...rest } = props;
+  return (
+    <Icon {...rest}>
+      {/* <IconMAMessage1 color={color} size={size} fillColor={fillColor} /> */}
+      Message
+    </Icon>
+  );
+};
+
+export {
+  DeleteOutlined,
+  DownOutlined,
+  UpOutlined,
+  MenuOutlined,
+  HideOutlined,
+  UploadOutlined,
+  CopyOutlined,
+  CaretUpOutlined,
+  CaretDownOutlined,
+  CheckCircleFilled,
+  CloseOutlined,
+  MessageOutlined,
+  AddOutlined,
+  CheckOutlined,
+  EditOutlined,
+  InboxOutlined,
+  LoadingOutlined,
+  PlusOutlined,
+};

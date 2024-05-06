@@ -1,0 +1,81 @@
+@root-entry-name: 'default';
+@import (reference) '../variable.less';
+@import (reference) '~antd/dist/antd.less';
+@fc-prefix: ~'@{xt-prefix}-selectInput';
+.@{fc-prefix} {
+	&-wrapper {
+		display: flex;
+	}
+
+	&-selectClass {
+		width: 30%;
+	}
+
+	&-inputClass {
+		flex-grow: 1;
+		margin-left: 10px;
+	}
+
+	&-selectkey-areacode-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-selectkey-wrapper {
+		width: 55%;
+	}
+
+	&-areacode-wrapper {
+		margin-left: 8px;
+		flex-grow: 1;
+	}
+
+	&-input-wrapper {
+		margin-left: 8px;
+		flex-grow: 1;
+	}
+
+	&-areacode-dropdown {
+		margin: 0;
+		padding-inline-start: 0;
+		max-height: calc(@select-dropdown-height * 5);
+		overflow-y: auto;
+		li {
+			cursor: pointer;
+			height: @select-dropdown-height;
+			padding: 5px 12px;
+			list-style-type: none;
+			margin: 0;
+		}
+		li:hover {
+			background-color: @item-hover-bg;
+		}
+
+		.selected-option {
+			background-color: @select-item-selected-bg;
+		}
+
+		.option {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		.option-recommendation {
+			.option-text {
+				min-width: 100px;
+			}
+			.option-tag {
+				padding-left: 40px;
+				float: right;
+				.option-tag-text {
+					color: @primary-color;
+					border-radius: 2px;
+					border: 1px solid @primary-color;
+					font-size: 12px;
+					padding: 2px 4px;
+				}
+			}
+		}
+	}
+}

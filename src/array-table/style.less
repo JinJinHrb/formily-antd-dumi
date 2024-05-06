@@ -1,0 +1,37 @@
+@import (reference) '../variable.less';
+@import (reference) '~antd/dist/antd.less';
+@array-table-prefix-cls: ~'@{ant-prefix}-formily-array-table';
+
+.@{array-table-prefix-cls} {
+	.atom-formily-item {
+		margin-bottom: 0;
+	}
+
+	.@{array-table-prefix-cls}-pagination {
+		display: flex;
+		justify-content: space-between;
+		margin: 14px 0;
+
+		.@{array-table-prefix-cls}-status-select.has-error {
+			.@{ant-prefix}-select-selector {
+				border-color: @error-color !important;
+			}
+		}
+	}
+
+	.@{ant-prefix}-table {
+		td {
+			visibility: visible;
+
+			.@{ant-prefix}-formily-item:not(.@{ant-prefix}-formily-item-feedback-layout-popover) {
+				margin-bottom: 0 !important;
+			}
+		}
+	}
+
+	.@{array-table-prefix-cls}-sort-helper {
+		background: #fff;
+		border: 1px solid #eee;
+		z-index: 10;
+	}
+}

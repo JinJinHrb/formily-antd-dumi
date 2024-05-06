@@ -1,0 +1,16 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"jsx": "react",
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"allowJs": true,
+		"module": "commonjs",
+		"target": "es5",
+		"paths": {
+			"@formily/*": ["./src"]
+		}
+	},
+	"exclude": ["./esm/*", "./lib/*"],
+	"type": ["node"]
+}

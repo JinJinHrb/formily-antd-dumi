@@ -1,0 +1,6 @@
+@import (reference) '../variable.less';
+.@{ant-prefix}-radio-button-wrapper-checked:not(
+		[class*=' @{ant-prefix}-radio-button-wrapper-disabled']
+	).@{ant-prefix}-radio-button-wrapper:first-child {
+	border-right-color: inherit !important;
+}

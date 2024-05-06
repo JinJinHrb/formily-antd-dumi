@@ -1,0 +1,26 @@
+@import (reference) '../../../variable.less';
+@tag-item-prefix-cls: ~'@{ant-prefix}-formily-tag-item';
+
+.@{tag-item-prefix-cls} {
+	position: relative;
+	display: inline-block;
+	margin-right: 8px;
+
+	&-content {
+		position: relative;
+		max-width: 148px;
+		line-height: 16px;
+		border-radius: 2px;
+		padding: 4px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		font-weight: 400;
+	}
+	&-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 2px;
+	}
+}

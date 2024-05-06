@@ -1,0 +1,101 @@
+@root-entry-name: 'default';
+
+@import (reference) '../variable.less';
+@import (reference) '~antd/dist/antd.less';
+@array-items-prefix-cls: ~'@{ant-prefix}-formily-array-items';
+
+.@{array-items-prefix-cls}-two-column {
+	min-width: 100%;
+
+	.@{array-items-prefix-cls}-item-inner {
+		display: flex;
+		gap: 3.33%;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	.@{ant-prefix}-space {
+		display: flex;
+		justify-content: space-between;
+		flex-shrink: 0;
+		min-width: 100%;
+		gap: 8px;
+		padding: 4px;
+		margin-bottom: 20px;
+		background: rgba(0, 0, 0, 0.02);
+	}
+}
+.@{array-items-prefix-cls}-one-column {
+	min-width: 100%;
+
+	.@{array-items-prefix-cls}-item-inner {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	// .@{ant-prefix}-space {
+	//   display: flex;
+	//   justify-content: space-between;
+	//   flex-shrink: 0;
+	//   min-width: 100%;
+	//   gap: 8px;
+	//   padding: 4px;
+	//   margin-bottom: 20px;
+	//   background: rgba(0, 0, 0, 0.02);
+	// }
+}
+
+.@{array-items-prefix-cls}-item-inner {
+	visibility: visible;
+}
+
+// fix https://github.com/alibaba/formily/issues/2891
+.@{array-items-prefix-cls}-item {
+	z-index: 100000;
+}
+
+.@{array-items-prefix-cls}-sort-helper {
+	z-index: 9999999;
+}
+
+.@{array-items-prefix-cls}-card {
+	display: flex;
+	// border: 1px solid @border-color-split;
+	margin-bottom: 10px;
+	// padding: 3px 6px;
+	// background: @card-background;
+	// justify-content: space-between;
+	// color: @text-color;
+	.@{ant-prefix}-formily-item:not(.@{ant-prefix}-formily-item-feedback-layout-popover) {
+		margin-bottom: 0 !important;
+	}
+}
+
+.@{array-items-prefix-cls}-item-inner-not-editable > .@{array-items-prefix-cls}-card {
+	margin-bottom: 0;
+}
+
+.@{array-items-prefix-cls}-divide {
+	display: flex;
+	border-bottom: 1px solid @border-color-split;
+	padding: 10px 0;
+	justify-content: space-between;
+
+	.@{ant-prefix}-formily-item:not(.@{ant-prefix}-formily-item-feedback-layout-popover) {
+		margin-bottom: 0 !important;
+
+		.@{ant-prefix}-formily-item-help {
+			position: absolute;
+			font-size: 12px;
+			top: 100%;
+			background: @card-background;
+			width: 100%;
+			margin-top: 3px;
+			padding: 3px;
+			z-index: 1;
+			border-radius: 3px;
+			box-shadow: 0 0 10px @border-color-split;
+		}
+	}
+}

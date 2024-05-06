@@ -1,0 +1,11 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outDir": "./lib",
+		"allowJs": true,
+		"paths": {
+			"@formily/*": ["src/*"]
+		},
+		"declaration": true
+	}
+}

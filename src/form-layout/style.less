@@ -1,0 +1,102 @@
+@import (reference) '../variable.less';
+@form-cls: ~'@{ant-prefix}-form';
+@form-layout-cls: ~'@{ant-prefix}-formily-layout';
+
+.@{form-cls} {
+	// 左右两栏布局
+	&-two-columns {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 24px;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&-read-pretty {
+		text-align: left;
+		.@{ant-prefix}-formily-item-label {
+			color: rgba(0, 0, 0, 0.85);
+			padding: 6px 12px;
+			line-height: 22px;
+			min-height: 22px;
+			display: flex;
+			flex-shrink: 0;
+		}
+		.@{ant-prefix}-formily-item-control {
+			display: flex;
+			color: rgba(0, 0, 0, 0.85);
+			padding: 6px 15px;
+			overflow: hidden;
+		}
+
+		.@{ant-prefix}-formily-item {
+			line-height: 22px;
+			min-height: 36px;
+		}
+
+		.@{ant-prefix}-formily-item-control-content {
+			min-height: 22px;
+			.atom-formily-item-control-content-component {
+				min-height: 22px;
+				line-height: 22px;
+			}
+		}
+
+		.@{ant-prefix}-formily-array-items-card {
+			.@{ant-prefix}-formily-item {
+				line-height: 22px;
+				min-height: 22px;
+			}
+			.@{ant-prefix}-formily-item-control {
+				padding: 0;
+			}
+		}
+	}
+
+	&-table-bordered {
+		border-left: 1px solid #f0f0f0;
+		border-top: 1px solid #f0f0f0;
+
+		.@{ant-prefix}-formily-item-label {
+			border-right: 1px solid #f0f0f0;
+			border-bottom: 1px solid #f0f0f0;
+			background: #fafafa;
+		}
+		.@{ant-prefix}-formily-item-control {
+			border-right: 1px solid #f0f0f0;
+			border-bottom: 1px solid #f0f0f0;
+		}
+
+		.@{ant-prefix}-formily-array-items-card {
+			.@{ant-prefix}-formily-item-control {
+				border: none;
+			}
+
+			.@{ant-prefix}-formily-array-items .@{ant-prefix}-formily-item-control {
+				border: none;
+			}
+		}
+	}
+}
+.@{form-layout-cls} {
+	&-title {
+		align-items: center;
+		color: rgb(38, 38, 38);
+		display: flex;
+		font-size: 16px;
+		font-weight: 600;
+		margin-bottom: 16px;
+		padding-left: 12px;
+		position: relative;
+
+		&::before {
+			background: #f09859;
+			border-radius: 1px;
+			content: ' ';
+			height: 12px;
+			left: 0px;
+			position: absolute;
+			width: 4px;
+		}
+	}
+}

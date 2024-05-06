@@ -1,0 +1,37 @@
+@import (reference) '../variable.less';
+@form-text-prefix-cls: ~'@{ant-prefix}-form-text';
+
+.@{form-text-prefix-cls} {
+	display: inline-flex;
+	font-size: 14px;
+	font-weight: 500;
+	word-break: break-all;
+
+	.@{ant-prefix}-tag:last-child {
+		margin-right: 0;
+	}
+
+	.@{ant-prefix}-btn {
+		display: inline-flex;
+		align-items: center;
+	}
+}
+
+.xt-customSelect-edit-pretty {
+	& > span {
+		padding: 0 5px;
+		color: #ff934a;
+	}
+}
+
+@tag-select-prefix-cls: ~'@{ant-prefix}-tag-select';
+
+.@{tag-select-prefix-cls} {
+	display: flex;
+	align-items: baseline;
+	&-items {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+}
