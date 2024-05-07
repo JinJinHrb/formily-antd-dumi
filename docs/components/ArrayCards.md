@@ -205,7 +205,7 @@ export default () => {
 
 ```tsx
 import React from 'react'
-import { CopyOutlined, CaretUpOutlined, CaretDownOutlined } from '@formily/antd-dumi'
+import { CopyOutlined, CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons'
 import {
 	ArrayCards,
 	ArrayItems,

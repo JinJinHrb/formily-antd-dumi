@@ -14,7 +14,7 @@ import React from 'react'
 import { Input, FormItem, FormButtonGroup, Submit, InputEditor } from '@formily/antd-dumi'
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/react'
-import { EditOutlined } from '@formily/antd-dumi'
+import { EditOutlined } from '@ant-design/icons'
 import XTConfigProvider from 'antd/es/config-provider'
 
 const SchemaField = createSchemaField({
@@ -105,7 +105,7 @@ import React from 'react'
 import { Input, FormItem, FormButtonGroup, Submit } from '@formily/antd-dumi'
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/react'
-import { EditOutlined } from '@formily/antd-dumi'
+import { EditOutlined } from '@ant-design/icons'
 import XTConfigProvider from 'antd/es/config-provider'
 import geoCodeOptions from './mock/geoCodeOptions.js'
 

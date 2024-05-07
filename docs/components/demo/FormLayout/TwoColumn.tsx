@@ -2,14 +2,14 @@ import { createForm } from '@formily/core'
 import { Field, FormProvider, observer } from '@formily/react'
 import { FormButtonGroup, FormGrid, FormItem, FormLayout, Input, Submit } from '@formily/antd-dumi'
 import React from 'react'
-import XTConfigProvider from 'antd/es/config-provider'
+import ConfigProvider from 'antd/es/config-provider'
 
 const form = createForm()
 
 export default observer(() => {
 	return (
 		<FormProvider form={form}>
-			<XTConfigProvider>
+			<ConfigProvider>
 				<FormLayout columns={2}>
 					<Field name='id' title='编号' decorator={[FormItem]} component={[Input]} />
 					<Field name='name' title='姓名' decorator={[FormItem]} component={[Input]} />
@@ -24,7 +24,7 @@ export default observer(() => {
 						</FormButtonGroup>
 					</FormGrid.GridColumn>
 				</FormLayout>
-			</XTConfigProvider>
+			</ConfigProvider>
 		</FormProvider>
 	)
 })

@@ -23,7 +23,7 @@ import {
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/react'
 import Button from 'antd/es/button'
-import { UploadOutlined, InboxOutlined } from '@formily/antd-dumi'
+import { UploadOutlined, InboxOutlined } from '@ant-design/icons'
 
 const NormalUpload = (props) => {
   return (
@@ -156,7 +156,7 @@ import {
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/react'
 import Button from 'antd/es/button'
-import { UploadOutlined, InboxOutlined } from '@formily/antd-dumi'
+import { UploadOutlined, InboxOutlined } from '@ant-design/icons'
 
 const NormalUpload = (props) => {
   return (
@@ -271,7 +271,7 @@ import {
 import { createForm } from '@formily/core'
 import { FormProvider, Field } from '@formily/react'
 import Button from 'antd/es/button'
-import { UploadOutlined, InboxOutlined } from '@formily/antd-dumi'
+import { UploadOutlined, InboxOutlined } from '@ant-design/icons'
 
 const NormalUpload = (props) => {
   return (

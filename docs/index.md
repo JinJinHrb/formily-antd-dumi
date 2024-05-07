@@ -2,8 +2,8 @@
 title: formily/antd-dumi
 order: 10
 hero:
-  title: Formily-xtd v3
-  desc: 基于XT Design封装的优雅且易用的Formily2.x组件体系
+  title: formily-antd-dumi
+  desc: 基于 ant-design 封装的优雅且易用的Formily2.x组件体系
   actions:
     - text: 主站文档
       link: https://wangfan.ai/formily-antd-dumi/

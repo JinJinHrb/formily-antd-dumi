@@ -30,7 +30,7 @@ import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/react'
 import useCurrencyOptions from './mock/useCurrencyOptions'
 import { getCcyRateList } from './mock/useCurrencyRate'
-import XTConfigProvider from 'antd/es/config-provider'
+import ConfigProvider from 'antd/es/config-provider'
 
 const SchemaField = createSchemaField({
 	components: {
@@ -48,7 +48,7 @@ const form = createForm({
 })
 
 export default () => (
-	<XTConfigProvider>
+	<ConfigProvider>
 		<FormProvider form={form}>
 			<SchemaField>
 				<SchemaField.String
@@ -136,7 +136,7 @@ export default () => (
 				<Submit onSubmit={console.log}>提交</Submit>
 			</FormButtonGroup>
 		</FormProvider>
-	</XTConfigProvider>
+	</ConfigProvider>
 )
 ```
 
@@ -148,7 +148,7 @@ import { AmountCurrency, FormItem, FormButtonGroup, Submit } from '@formily/antd
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/react'
 import useCurrencyOptions from './mock/useCurrencyOptions'
-import XTConfigProvider from 'antd/es/config-provider'
+import ConfigProvider from 'antd/es/config-provider'
 
 const SchemaField = createSchemaField({
 	components: {
@@ -191,14 +191,14 @@ const schema = {
 }
 
 export default () => (
-	<XTConfigProvider>
+	<ConfigProvider>
 		<FormProvider form={form}>
 			<SchemaField schema={schema} />
 			<FormButtonGroup>
 				<Submit onSubmit={console.log}>提交</Submit>
 			</FormButtonGroup>
 		</FormProvider>
-	</XTConfigProvider>
+	</ConfigProvider>
 )
 ```
 
@@ -210,12 +210,12 @@ import { AmountCurrency, FormItem, FormButtonGroup, Submit } from '@formily/antd
 import { createForm } from '@formily/core'
 import { FormProvider, Field } from '@formily/react'
 import useCurrencyOptions from './mock/useCurrencyOptions'
-import XTConfigProvider from 'antd/es/config-provider'
+import ConfigProvider from 'antd/es/config-provider'
 
 const form = createForm()
 
 export default () => (
-	<XTConfigProvider>
+	<ConfigProvider>
 		<FormProvider form={form}>
 			<Field
 				name='input'
@@ -236,7 +236,7 @@ export default () => (
 				<Submit onSubmit={console.log}>提交</Submit>
 			</FormButtonGroup>
 		</FormProvider>
-	</XTConfigProvider>
+	</ConfigProvider>
 )
 ```
 

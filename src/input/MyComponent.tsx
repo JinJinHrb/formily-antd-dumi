@@ -1,8 +1,8 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { ReactNode, SyntheticEvent } from 'react'
 import { trim, isEmpty, isArray, isEqual, find } from 'lodash-es'
-import XtdSelect from 'antd/es/Select'
-import XtdInput, { InputProps } from 'antd/es/input'
+import Select from 'antd/es/Select'
+import Input, { InputProps } from 'antd/es/input'
 import ConfigProvider from 'antd/es/config-provider'
 import classNames from 'classnames'
 import { TAreaCodeOption, getAreaCodeSection, isDomVisible, getAreaCodeFromAccount } from '../__builtins__'
@@ -383,7 +383,7 @@ class MyComponent extends React.PureComponent<IProps, IState> {
 						<div className={`${prefixCls}-wrapper`} style={style}>
 							{readOnly && (
 								<div className={`${prefixCls}-areacode`}>
-									<XtdInput
+									<Input
 										value={selectedAreaCode}
 										placeholder={'区号'}
 										readOnly={true}
@@ -393,7 +393,7 @@ class MyComponent extends React.PureComponent<IProps, IState> {
 							)}
 							{!readOnly && (
 								<div className={`${prefixCls}-areacode`} ref={r => (this.popupContainerRef = r as any)}>
-									<XtdSelect
+									<Select
 										className={`${prefixCls}-areacode`}
 										disabled={disabled}
 										value={selectedAreaCode}
@@ -426,7 +426,7 @@ class MyComponent extends React.PureComponent<IProps, IState> {
 								</div>
 							)}
 							<div className={`${prefixCls}-input`}>
-								<XtdInput
+								<Input
 									{...props}
 									disabled={disabled}
 									readOnly={readOnly}
@@ -440,7 +440,7 @@ class MyComponent extends React.PureComponent<IProps, IState> {
 					</>
 				)}
 				{!displayAreaCode && (
-					<XtdInput value={displayInputValue} style={style} disabled={disabled} readOnly={readOnly} {...props} />
+					<Input value={displayInputValue} style={style} disabled={disabled} readOnly={readOnly} {...props} />
 				)}
 			</>
 		)

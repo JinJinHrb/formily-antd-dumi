@@ -404,7 +404,7 @@ function ceilUpNum(num: number | string | undefined, decimalPlaces: number) {
  * @param ceilUp true 向上取整，否则截断多余小数位
  * @param ceilUpIfTooSmall true 值太小时，向上取整，否则截断多余小数位
  * @param limit value溢出则取最大值 max
- * @param formatType 如果提供枚举类型之内的参数，会覆盖 precision, decimalPlaces；在 formily-xtd 数字相关栏位还会覆盖 max 或 min
+ * @param formatType 如果提供枚举类型之内的参数，会覆盖 precision, decimalPlaces；在 formily-antd-dumi 数字相关栏位还会覆盖 max 或 min
  * @returns
  */
 // eslint-disable-next-line complexity

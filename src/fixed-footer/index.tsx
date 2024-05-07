@@ -1,9 +1,9 @@
 import ConfigProvider from 'antd/es/config-provider'
 import classNames from 'classnames'
-import type { ReactNode } from 'react'
+import type { ReactNode, ReactPortal } from 'react'
 import React, { createContext, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { useConfigContext, ConfigProvider as XtdConfigProvider } from '../config-provider'
+import { useConfigContext, WfConfigProvider } from '../config-provider'
 import { usePrefixCls } from '../__builtins__/hooks'
 
 export type FixedFooterProps = {
@@ -20,9 +20,9 @@ const fixedFooterContext = createContext<{
 	setDom?: (dom: DocumentFragment | undefined) => void
 }>({})
 
-const FixedFooter: React.FC<FixedFooterProps> = props => {
+const FixedFooter: (props: FixedFooterProps) => ReactPortal = (props): ReactPortal => {
 	const { children, className, style, renderContent, getContainer, prefixCls: propPrefixCls, ...restProps } = props
-	const { getPopupContainer } = useContext<{ getPopupContainer: () => HTMLElement }>(ConfigProvider.ConfigContext)
+	const { getPopupContainer } = useContext<{ getPopupContainer?: () => HTMLElement }>(ConfigProvider.ConfigContext)
 
 	const footerPrefixCls = usePrefixCls('formily-fixed-footer', { prefixCls: propPrefixCls })
 
@@ -94,7 +94,7 @@ const FixedFooter: React.FC<FixedFooterProps> = props => {
 		</div>
 	)
 
-	return createPortal(renderDom, containerDom, footerPrefixCls)
+	return createPortal(renderDom, containerDom, footerPrefixCls) as ReactPortal
 }
 
 /**
@@ -110,11 +110,11 @@ const FixedFooterWrapper: React.FC<React.PropsWithChildren<{ fixedContainer?: bo
 	const footerRef = useRef<HTMLDivElement>(null)
 
 	let node = (
-		<XtdConfigProvider setHasFixedFooter={setHasFixedFooter} hasFixedFooter={hasFixedFooter}>
+		<WfConfigProvider setHasFixedFooter={setHasFixedFooter} hasFixedFooter={hasFixedFooter}>
 			{children}
 			{fixedContainer && <div ref={footerRef} className={`${footerPrefixCls}-wrapper`}></div>}
 			{!fixedContainer && hasFixedFooter && <div className={`${footerPrefixCls}-dummy`}></div>}
-		</XtdConfigProvider>
+		</WfConfigProvider>
 	)
 
 	useLayoutEffect(() => {

@@ -1344,7 +1344,7 @@ const MOCK_DATA: {
 			'35990100879000022073000010001': [''],
 			hitRecoveryRule: null,
 			'35990100879000022073000010003': [
-				'{"attachmentName":"a6da738f-7ab7-4144-8685-6edc315f3b5f.zip","attachmentType":"TDCustomerAttachment","fileType":"zip","fileId":"36990100607000022101901956836","originParentFileId":"36990100607000022070101000004","fileSource":"CLOUD_DISK","uid":"a6da738f-7ab7-4144-8685-6edc315f3b5f.zip","name":"a6da738f-7ab7-4144-8685-6edc315f3b5f.zip","customizedAttachmentName":"XTD_V2.0.zip","status":"done"}',
+				'{"attachmentName":"a6da738f-7ab7-4144-8685-6edc315f3b5f.zip","attachmentType":"TDCustomerAttachment","fileType":"zip","fileId":"36990100607000022101901956836","originParentFileId":"36990100607000022070101000004","fileSource":"CLOUD_DISK","uid":"a6da738f-7ab7-4144-8685-6edc315f3b5f.zip","name":"a6da738f-7ab7-4144-8685-6edc315f3b5f.zip","customizedAttachmentName":"ANTD_V4.0.zip","status":"done"}',
 				'{"attachmentName":"5e045b79-a995-44c7-8901-0287c6f12753.jpg","attachmentType":"TDCustomerAttachment","fileType":"jpg","uid":"5e045b79-a995-44c7-8901-0287c6f12753.jpg","name":"5e045b79-a995-44c7-8901-0287c6f12753.jpg","customizedAttachmentName":"快捷登录注册-测试用例.jpg","fileSource":"LOCAL","status":"done"}',
 			],
 			recentContactTime: 1672306856000,

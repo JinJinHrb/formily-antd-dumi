@@ -620,7 +620,7 @@ import {
 } from '@formily/antd-dumi'
 import { createForm } from '@formily/core'
 import { FormProvider, createSchemaField } from '@formily/react'
-import { CheckCircleFilled, LoadingOutlined } from '@formily/antd-dumi'
+import { CheckCircleFilled, LoadingOutlined } from '@ant-design/icons'
 import XTConfigProvider from 'antd/es/config-provider'
 
 const Title = props => <h3>{props.text}</h3>
