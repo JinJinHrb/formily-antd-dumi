@@ -6,7 +6,7 @@ yarn add puppeteer@19.2.2 --ignore-scripts
 # 为了解决@formily-antd/array-base在加载和处理海量数据时出现的性能问题，采取了一系列优化措施。
 
 ## 问题描述
-使用@formily-xtd/array-base时，当通过form.setValues一次性加载10000条数据时，页面会卡死。
+使用@formily-antd/array-base时，当通过form.setValues一次性加载10000条数据时，页面会卡死。
 数据加载完成后，页面滚动也会卡死。
 
 * 解决方案
